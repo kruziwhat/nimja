@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to [Friend's Name]'s Mixtape Zone</title>
+  <title>Welcome to Nim's Digital Mixtape Shrine</title>
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'VT323', monospace;
-      background: url('https://i.pinimg.com/originals/93/24/ed/9324edf5fd4d0b9cc3b78e2b4a8ecdc9.gif');
-      background-size: cover;
+      background: #000;
       margin: 0;
       color: #00ffcc;
       overflow-x: hidden;
       text-shadow: 1px 1px #000;
-      cursor: url('https://cur.cursors-4u.net/nature/nat-11/nat1053.cur'), auto;
+      animation: flicker 2s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.98; }
+      100% { opacity: 1; }
     }
     a { color: #ff66cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -76,12 +80,23 @@
       font-size: 1em;
       border: 2px solid #00ffcc;
     }
+    .marquee-bar {
+      background: #111;
+      color: #ff66cc;
+      font-size: 18px;
+      padding: 5px;
+      font-family: 'Special Elite';
+    }
   </style>
 </head>
 <body>
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">Radiohead is playing... Nim is watching Taxi Driver again... Kimya Dawson’s voice fills the room... and somewhere in France, RAW is running in reverse. 🌒</marquee>
+  </div>
+
   <div class="crt">
-    <h1>Welcome to [Friend's Name]'s Web Scrapbook</h1>
-    <p>You're now surfing a mixtape from the past. Hover, click, explore — and maybe you'll find the easter egg too.</p>
+    <h1>Welcome to Nim's Mixtape Shrine</h1>
+    <p>This isn't just a birthday site — it's a digital lookback, a warped zine, a lost tab from the early 2000s. Hover. Click. Discover.</p>
   </div>
 
   <div class="crt polaroids">
@@ -90,36 +105,477 @@
   </div>
 
   <div class="crt player">
-    <h2>Mixtape Corner 🎵</h2>
+    <h2>🎧 Now Playing</h2>
     <audio controls>
       <source src="assets/music/song1.mp3" type="audio/mp3">
     </audio>
+    <p><em>“You and I have memories...” – Kimya Dawson</em></p>
     <div class="spotify-embed">
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3WvGXE8FqYX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </div>
 
   <div class="crt player">
-    <h2>Cinema Shrine 🍿</h2>
+    <h2>🎬 Cinema Shrine</h2>
     <div class="letterboxd-embed">
-      <iframe src="https://letterboxd.com/[USERNAME]/" width="100%" height="400" style="border:none;"></iframe>
+      <iframe src="https://letterboxd.com/" width="100%" height="400" style="border:none;"></iframe>
     </div>
+    <p><strong>Faves:</strong> <em>RAW, Taxi Driver, Look Back (yes, the manga counts)</em></p>
   </div>
 
   <div class="crt">
     <button class="reveal-btn" onclick="document.querySelector('.easter-egg').style.display='block'">Click me?</button>
-    <div class="easter-egg">🌟 You found the easter egg. Here's a secret playlist: <a href="https://open.spotify.com/playlist/1uUjDCfctGa1K4ym0xkYOD">Lo-fi Time Machine</a></div>
+    <div class="easter-egg">🧠 You found the ghost tab. Here's a secret: <a href="https://open.spotify.com/playlist/1uUjDCfctGa1K4ym0xkYOD">Lo-fi Time Machine</a>. Bookmark it. Like the memory you forgot but still feel.</div>
   </div>
 
   <div class="crt vintage-terminal">
-    Loading memories...
-    <br>>> Initiating MP3 player...
-    <br>>> Accessing movie archives...
-    <br>>> You are now entering a portal of nostalgia. Enjoy.
+    Booting: N1M.exe
+    <br>>> Loading .jpgs...
+    <br>>> Playing: "True Love Will Find You In The End"...
+    <br>>> Hidden memory unlocked: You’re still here. You always were.
   </div>
 
   <script>
-    // Bonus glitch typewriter effect or terminal typing can be added here
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.altKey && e.key === 'm') {
+        alert('🪐 You accessed the hidden console memory: “Nim was here.”');
+      }
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Nim's Digital Mixtape Shrine</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'VT323', monospace;
+      background: #000;
+      margin: 0;
+      color: #00ffcc;
+      overflow-x: hidden;
+      text-shadow: 1px 1px #000;
+      animation: flicker 2s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.98; }
+      100% { opacity: 1; }
+    }
+    a { color: #ff66cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .crt {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      margin: 20px auto;
+      border: 2px dashed #ff66cc;
+      max-width: 800px;
+      box-shadow: 0 0 20px #ff66cc;
+    }
+    h1, h2, h3 {
+      font-family: 'Special Elite', cursive;
+      color: #ff66cc;
+    }
+    .polaroids {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .polaroid {
+      width: 180px;
+      border: 5px solid #fff;
+      box-shadow: 2px 2px 10px #000;
+      transform: rotate(-2deg);
+      transition: 0.3s ease;
+    }
+    .polaroid:hover { transform: rotate(0deg) scale(1.05); }
+    .player {
+      text-align: center;
+    }
+    .spotify-embed, .letterboxd-embed {
+      margin: 20px 0;
+    }
+    .easter-egg {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 50px;
+      display: none;
+    }
+    .reveal-btn {
+      background: none;
+      border: 2px solid #ff66cc;
+      color: #ff66cc;
+      font-family: 'Special Elite';
+      padding: 10px 20px;
+      margin: 20px auto;
+      display: block;
+      cursor: pointer;
+    }
+    .vintage-terminal {
+      background: #000;
+      color: #33ff33;
+      font-family: monospace;
+      padding: 20px;
+      margin-top: 40px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 1em;
+      border: 2px solid #00ffcc;
+    }
+    .marquee-bar {
+      background: #111;
+      color: #ff66cc;
+      font-size: 18px;
+      padding: 5px;
+      font-family: 'Special Elite';
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">Radiohead is playing... Nim is watching Taxi Driver again... Kimya Dawson’s voice fills the room... and somewhere in France, RAW is running in reverse. 🌒</marquee>
+  </div>
+
+  <div class="crt">
+    <h1>Welcome to Nim's Mixtape Shrine</h1>
+    <p>This isn't just a birthday site — it's a digital lookback, a warped zine, a lost tab from the early 2000s. Hover. Click. Discover.</p>
+  </div>
+
+  <div class="crt polaroids">
+    <img src="assets/images/photo1.jpg" alt="Polaroid 1" class="polaroid">
+    <img src="assets/images/photo2.jpg" alt="Polaroid 2" class="polaroid">
+  </div>
+
+  <div class="crt player">
+    <h2>🎧 Now Playing</h2>
+    <audio controls>
+      <source src="assets/music/song1.mp3" type="audio/mp3">
+    </audio>
+    <p><em>“You and I have memories...” – Kimya Dawson</em></p>
+    <div class="spotify-embed">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3WvGXE8FqYX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="crt player">
+    <h2>🎬 Cinema Shrine</h2>
+    <div class="letterboxd-embed">
+      <iframe src="https://letterboxd.com/" width="100%" height="400" style="border:none;"></iframe>
+    </div>
+    <p><strong>Faves:</strong> <em>RAW, Taxi Driver, Look Back (yes, the manga counts)</em></p>
+  </div>
+
+  <div class="crt">
+    <button class="reveal-btn" onclick="document.querySelector('.easter-egg').style.display='block'">Click me?</button>
+    <div class="easter-egg">🧠 You found the ghost tab. Here's a secret: <a href="https://open.spotify.com/playlist/1uUjDCfctGa1K4ym0xkYOD">Lo-fi Time Machine</a>. Bookmark it. Like the memory you forgot but still feel.</div>
+  </div>
+
+  <div class="crt vintage-terminal">
+    Booting: N1M.exe
+    <br>>> Loading .jpgs...
+    <br>>> Playing: "True Love Will Find You In The End"...
+    <br>>> Hidden memory unlocked: You’re still here. You always were.
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.altKey && e.key === 'm') {
+        alert('🪐 You accessed the hidden console memory: “Nim was here.”');
+      }
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Nim's Digital Mixtape Shrine</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'VT323', monospace;
+      background: #000;
+      margin: 0;
+      color: #00ffcc;
+      overflow-x: hidden;
+      text-shadow: 1px 1px #000;
+      animation: flicker 2s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.98; }
+      100% { opacity: 1; }
+    }
+    a { color: #ff66cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .crt {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      margin: 20px auto;
+      border: 2px dashed #ff66cc;
+      max-width: 800px;
+      box-shadow: 0 0 20px #ff66cc;
+    }
+    h1, h2, h3 {
+      font-family: 'Special Elite', cursive;
+      color: #ff66cc;
+    }
+    .polaroids {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .polaroid {
+      width: 180px;
+      border: 5px solid #fff;
+      box-shadow: 2px 2px 10px #000;
+      transform: rotate(-2deg);
+      transition: 0.3s ease;
+    }
+    .polaroid:hover { transform: rotate(0deg) scale(1.05); }
+    .player {
+      text-align: center;
+    }
+    .spotify-embed, .letterboxd-embed {
+      margin: 20px 0;
+    }
+    .easter-egg {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 50px;
+      display: none;
+    }
+    .reveal-btn {
+      background: none;
+      border: 2px solid #ff66cc;
+      color: #ff66cc;
+      font-family: 'Special Elite';
+      padding: 10px 20px;
+      margin: 20px auto;
+      display: block;
+      cursor: pointer;
+    }
+    .vintage-terminal {
+      background: #000;
+      color: #33ff33;
+      font-family: monospace;
+      padding: 20px;
+      margin-top: 40px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 1em;
+      border: 2px solid #00ffcc;
+    }
+    .marquee-bar {
+      background: #111;
+      color: #ff66cc;
+      font-size: 18px;
+      padding: 5px;
+      font-family: 'Special Elite';
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">Radiohead is playing... Nim is watching Taxi Driver again... Kimya Dawson’s voice fills the room... and somewhere in France, RAW is running in reverse. 🌒</marquee>
+  </div>
+
+  <div class="crt">
+    <h1>Welcome to Nim's Mixtape Shrine</h1>
+    <p>This isn't just a birthday site — it's a digital lookback, a warped zine, a lost tab from the early 2000s. Hover. Click. Discover.</p>
+  </div>
+
+  <div class="crt polaroids">
+    <img src="assets/images/photo1.jpg" alt="Polaroid 1" class="polaroid">
+    <img src="assets/images/photo2.jpg" alt="Polaroid 2" class="polaroid">
+  </div>
+
+  <div class="crt player">
+    <h2>🎧 Now Playing</h2>
+    <audio controls>
+      <source src="assets/music/song1.mp3" type="audio/mp3">
+    </audio>
+    <p><em>“You and I have memories...” – Kimya Dawson</em></p>
+    <div class="spotify-embed">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3WvGXE8FqYX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="crt player">
+    <h2>🎬 Cinema Shrine</h2>
+    <div class="letterboxd-embed">
+      <iframe src="https://letterboxd.com/" width="100%" height="400" style="border:none;"></iframe>
+    </div>
+    <p><strong>Faves:</strong> <em>RAW, Taxi Driver, Look Back (yes, the manga counts)</em></p>
+  </div>
+
+  <div class="crt">
+    <button class="reveal-btn" onclick="document.querySelector('.easter-egg').style.display='block'">Click me?</button>
+    <div class="easter-egg">🧠 You found the ghost tab. Here's a secret: <a href="https://open.spotify.com/playlist/1uUjDCfctGa1K4ym0xkYOD">Lo-fi Time Machine</a>. Bookmark it. Like the memory you forgot but still feel.</div>
+  </div>
+
+  <div class="crt vintage-terminal">
+    Booting: N1M.exe
+    <br>>> Loading .jpgs...
+    <br>>> Playing: "True Love Will Find You In The End"...
+    <br>>> Hidden memory unlocked: You’re still here. You always were.
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.altKey && e.key === 'm') {
+        alert('🪐 You accessed the hidden console memory: “Nim was here.”');
+      }
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Nim's Digital Mixtape Shrine</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'VT323', monospace;
+      background: #000;
+      margin: 0;
+      color: #00ffcc;
+      overflow-x: hidden;
+      text-shadow: 1px 1px #000;
+      animation: flicker 2s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.98; }
+      100% { opacity: 1; }
+    }
+    a { color: #ff66cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .crt {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      margin: 20px auto;
+      border: 2px dashed #ff66cc;
+      max-width: 800px;
+      box-shadow: 0 0 20px #ff66cc;
+    }
+    h1, h2, h3 {
+      font-family: 'Special Elite', cursive;
+      color: #ff66cc;
+    }
+    .polaroids {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .polaroid {
+      width: 180px;
+      border: 5px solid #fff;
+      box-shadow: 2px 2px 10px #000;
+      transform: rotate(-2deg);
+      transition: 0.3s ease;
+    }
+    .polaroid:hover { transform: rotate(0deg) scale(1.05); }
+    .player {
+      text-align: center;
+    }
+    .spotify-embed, .letterboxd-embed {
+      margin: 20px 0;
+    }
+    .easter-egg {
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 50px;
+      display: none;
+    }
+    .reveal-btn {
+      background: none;
+      border: 2px solid #ff66cc;
+      color: #ff66cc;
+      font-family: 'Special Elite';
+      padding: 10px 20px;
+      margin: 20px auto;
+      display: block;
+      cursor: pointer;
+    }
+    .vintage-terminal {
+      background: #000;
+      color: #33ff33;
+      font-family: monospace;
+      padding: 20px;
+      margin-top: 40px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 1em;
+      border: 2px solid #00ffcc;
+    }
+    .marquee-bar {
+      background: #111;
+      color: #ff66cc;
+      font-size: 18px;
+      padding: 5px;
+      font-family: 'Special Elite';
+    }
+  </style>
+</head>
+<body>
+  <div class="marquee-bar">
+    <marquee behavior="scroll" direction="left">Radiohead is playing... Nim is watching Taxi Driver again... Kimya Dawson’s voice fills the room... and somewhere in France, RAW is running in reverse. 🌒</marquee>
+  </div>
+
+  <div class="crt">
+    <h1>Welcome to Nim's Mixtape Shrine</h1>
+    <p>This isn't just a birthday site — it's a digital lookback, a warped zine, a lost tab from the early 2000s. Hover. Click. Discover.</p>
+  </div>
+
+  <div class="crt polaroids">
+    <img src="assets/images/photo1.jpg" alt="Polaroid 1" class="polaroid">
+    <img src="assets/images/photo2.jpg" alt="Polaroid 2" class="polaroid">
+  </div>
+
+  <div class="crt player">
+    <h2>🎧 Now Playing</h2>
+    <audio controls>
+      <source src="assets/music/song1.mp3" type="audio/mp3">
+    </audio>
+    <p><em>“You and I have memories...” – Kimya Dawson</em></p>
+    <div class="spotify-embed">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3WvGXE8FqYX?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="crt player">
+    <h2>🎬 Cinema Shrine</h2>
+    <div class="letterboxd-embed">
+      <iframe src="https://letterboxd.com/" width="100%" height="400" style="border:none;"></iframe>
+    </div>
+    <p><strong>Faves:</strong> <em>RAW, Taxi Driver, Look Back (yes, the manga counts)</em></p>
+  </div>
+
+  <div class="crt">
+    <button class="reveal-btn" onclick="document.querySelector('.easter-egg').style.display='block'">Click me?</button>
+    <div class="easter-egg">🧠 You found the ghost tab. Here's a secret: <a href="https://open.spotify.com/playlist/1uUjDCfctGa1K4ym0xkYOD">Lo-fi Time Machine</a>. Bookmark it. Like the memory you forgot but still feel.</div>
+  </div>
+
+  <div class="crt vintage-terminal">
+    Booting: N1M.exe
+    <br>>> Loading .jpgs...
+    <br>>> Playing: "True Love Will Find You In The End"...
+    <br>>> Hidden memory unlocked: You’re still here. You always were.
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.altKey && e.key === 'm') {
+        alert('🪐 You accessed the hidden console memory: “Nim was here.”');
+      }
+    });
   </script>
 </body>
 </html>
