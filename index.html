@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>~ Nim's Birthday Zone ~</title>
+  <title>~ Happy Birthday Nemo <3 ~</title>
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
@@ -34,13 +34,20 @@
       max-width: 850px;
       box-shadow: 0 0 30px #ff00ff;
     }
-    h1, h2, h3 { font-family: 'Press Start 2P', cursive; color: #ffccff; text-align: center; }
+    h1, h2, h3 {
+      font-family: 'Press Start 2P', cursive;
+      color: #ffccff;
+      text-align: center;
+    }
     a { color: #ff69b4; text-decoration: none; }
     a:hover { text-decoration: underline; }
-
-    .polaroid-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .polaroid-grid {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
     .polaroid {
-      width: 160px;
+      width: 200px;
       border: 3px solid white;
       padding: 5px;
       background: #fff;
@@ -49,7 +56,6 @@
       transition: 0.3s ease-in-out;
     }
     .polaroid:hover { transform: scale(1.1) rotate(0deg); }
-
     .msn-popup {
       background: #c0c0c0;
       border: 3px ridge #000;
@@ -64,7 +70,6 @@
     }
     .msn-popup h4 { margin: 0; font-size: 12px; background: #000080; color: white; padding: 3px; }
     .msn-popup p { font-size: 14px; color: black; margin-top: 5px; }
-
     .vhs-tracklist {
       display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
     }
@@ -94,51 +99,37 @@
       font-family: monospace;
       cursor: pointer;
     }
+    audio { display: block; margin: 20px auto; }
   </style>
 </head>
 <body>
-  <div class="glitch">~ Happy Birthday Nim ~ Booting Your Digital Time Capsule... 🪐</div>
-
+  <div class="glitch"> Happy Birthday Nim 🪐</div>
   <div class="crt">
     <h1>Nim.exe</h1>
-    <p>Welcome to a wormhole of mixtapes, late-night cries, and neon noise. You're surfing the ghost of a playlist past.</p>
+    <p>Welcome to a wormhole of mixtapes.</p>
   </div>
-
   <div class="crt polaroid-grid">
-    <img src="assets/images/photo1.jpg" class="polaroid">
-    <img src="assets/images/photo2.jpg" class="polaroid">
-    <img src="assets/images/photo3.jpg" class="polaroid">
+    <img src="image3.png" class="polaroid">
+    <img src="image4.png" class="polaroid">
   </div>
-
   <div class="crt">
     <h2>Now Playing 🎧</h2>
+    <audio autoplay controls loop>
+      <source src="assets/music/anybody-else.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
     <div class="vhs-tracklist">
-      <div class="vhs-item">“True Love Will Find You In The End”</div>
-      <div class="vhs-item">“No Surprises” – Radiohead</div>
-      <div class="vhs-item">“So Nice So Smart” – Kimya Dawson</div>
-    </div>
-    <iframe style="border-radius:12px; margin-top:10px" src="https://open.spotify.com/embed/playlist/5NOG1YATaciWlkiBKP8SCD?si=1dc86d3e1e994d59" width="100%" height="180" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  </div>
-
-  <div class="crt">
-    <h2>Movie Shrine 🎬</h2>
-    <div class="vhs-tracklist">
-      <div class="vhs-item">🎞️ RAW (2016) — Bloody brilliance</div>
-      <div class="vhs-item">🎞️ Taxi Driver (1976) — Are you talkin’ to me?</div>
-      <div class="vhs-item">🎞️ Look Back — Chainsaw tears & trauma</div>
+      <div class="vhs-item">“Anybody Else But You” – Moldy Peaches</div>
     </div>
   </div>
-
   <div class="crt">
     <button class="reveal-btn" onclick="document.querySelector('.easter-egg').style.display='block'">Click for Chaos 🌀</button>
     <div class="easter-egg">💾 Hidden track unlocked: <a href="https://open.spotify.com/playlist/1uUjDCfctGa1K4ym0xkYOD">Lo-fi Time Machine</a></div>
   </div>
-
   <div class="msn-popup">
     <h4>Nim's Messenger</h4>
     <p><strong>You:</strong> hey nim i made u smth. it’s weird. like us.</p>
   </div>
-
   <script>
     document.addEventListener('keydown', function(e) {
       if (e.ctrlKey && e.altKey && e.key === 'm') {
